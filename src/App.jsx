@@ -26,7 +26,7 @@ const App = () => {
         <Route path="/register" element={<Register />} /> 
         <Route path="/visualizer" element={<BinarySearchTree />} />{" "}
         {/* Binary Search Tree Visualizer */}
-        <Route path="/score" element={<ScoreSystem />} /> 
+        {/* <Route path="/score" element={<ScoreSystem />} />  */}
       </Routes>
     </>
   );
