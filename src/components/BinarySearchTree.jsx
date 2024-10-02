@@ -84,7 +84,7 @@ function BinarySearchTree({ updateScore }) {
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(false);
   const [showTryAgain, setShowTryAgain] = useState(false);
   const [level, setLevel] = useState(0); // Start level at 0
-  const [isGameStarted, setIsGameStarted] = useState(false); // Track if the game has started
+  const [isGameStarted, setIsGameStarted] = useState(false); 
   const timerRef = useRef(null);
 
   const insertNode = (root, value) => {
