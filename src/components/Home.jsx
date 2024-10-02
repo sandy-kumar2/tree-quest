@@ -39,7 +39,7 @@ const Home = () => {
         "http://localhost:5000/api/v1/room/entry",
         {
           roomId,
-          email,
+          playerName,
         }
       );
       if (response.data.success) {
