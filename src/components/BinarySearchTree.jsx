@@ -13,6 +13,7 @@ import {
   levelOrderTraversal,
   findSuccessor
 } from "../utils/treeUtils";
+import ScoreSystem from "./ScoreSystem";
 
 function BinarySearchTree({ updateScore }) {
   class BinaryTreeNode {
@@ -278,10 +279,13 @@ const collectValues = (node, values=[]) => {
       <div className="grid grid-cols-2 gap-8 p-8 rounded-lg shadow-lg text-center w-full">
         {/* Left column */}
         <div>
+          
           {level === 0 ? (
             <GameStart /> // Display GameStart when level is 0
           ) : (
-            <LevelDisplay level={level} /> // Display LevelDisplay when level is > 0
+            <div>
+            <LevelDisplay level={level} />
+            </div> // Display LevelDisplay when level is > 0
           )}
           {treeNodes.length > 0 ? (
             <div className="text-center">
@@ -325,6 +329,7 @@ const collectValues = (node, values=[]) => {
             )}
             <p className="text-yellow-500 mt-4">Time left: {timer}s</p>
           </div>
+          <ScoreSystem />
         </div>
 
         {/* Right column */}

@@ -38,8 +38,8 @@ const Register = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-500">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-[#640D5F] to-purple-500">
+      <div className="bg-white p-8 shadow-lg w-full max-w-sm rounded-xl">
         <h2 className="text-2xl font-bold mb-6 text-center">
           Register New Player
         </h2>

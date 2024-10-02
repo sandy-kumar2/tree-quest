@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; 
-import axios from "axios"; 
-import Modal from "./Modal"; 
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import Modal from "./Modal";
 
 const Home = () => {
   const [isMakeRoomOpen, setIsMakeRoomOpen] = useState(false);
@@ -53,28 +53,43 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen w-full bg-gradient-to-r from-blue-500 to-purple-500">
-      <h1 className="text-5xl font-bold text-white mb-4">
-        The Binary Search Tree (BST) Game is an interactive educational game
-        designed to help users learn and understand the properties and traversal
-        methods of binary search trees. Below is a breakdown of the key
-        features, functionalities, and overall structure of the project:
-      </h1>
-      <p className="text-xl text-white mb-6">
-        Navigate using the links above to access different sections of the app.
-      </p>
-      <button
-        onClick={() => setIsMakeRoomOpen(true)}
-        className="bg-green-500 text-white px-4 py-2 rounded mb-4"
-      >
-        Make Room
-      </button>
-      <button
-        onClick={() => setIsJoinRoomOpen(true)}
-        className="bg-yellow-500 text-white px-4 py-2 rounded"
-      >
-        Join Room
-      </button>
+    <div className="flex flex-col items-center pt-28 h-screen w-full bg-gradient-to-r from-[#640D5F] to-purple-500">
+      <div className="bg-[#2E073F] text-center py-4 mx-20 rounded-xl">
+        <h1 className="text-3xl font-semibold text-[#EDDFE0] text-center   mb-4 montserrat mx-20">
+          The Binary Search Tree (BST) Game{" "}
+        </h1>{" "}
+        <p className="text-2xl font-light mx-20 mb-6 text-[#EDDFE0]">
+          {" "}
+          It is an interactive educational game designed to help users learn and
+          understand the properties and traversal methods of binary search
+          trees. Below is a breakdown of the key features, functionalities, and
+          overall structure of the project:
+        </p>
+        <p className=" text-[#EDDFE0]  text-lg underline">
+          Navigate using the links above to access different sections of the
+          app.
+        </p>
+      </div>
+      <div>
+        <div className="text-center my-10 bg-[#2E073F] w-72 h-72 rounded-full bg-opacity-70">
+          <img src="tree.svg" alt="" className="w-60 h-60 mx-auto mt-2" />
+          <p className="text-white text-center text-xl ">Tree Quest</p>
+        </div>
+      </div>
+      <div className="flex gap-4 ">
+        <button
+          onClick={() => setIsMakeRoomOpen(true)}
+          className="bg-green-300 text-green-600 border-2 border-green-500 px-4 py-2 rounded "
+        >
+          Make Room
+        </button>
+        <button
+          onClick={() => setIsJoinRoomOpen(true)}
+          className="bg-yellow-200 text-yellow-500 border-2 border-yellow-500 px-4 py-2 rounded"
+        >
+          Join Room
+        </button>
+      </div>
 
       {/* Modal for Making Room */}
       <Modal
@@ -94,7 +109,7 @@ const Home = () => {
           type="email"
           placeholder="Your Email"
           value={email}
-          onChange={(e)=>setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           className="border rounded w-full px-3 py-2 mb-4"
         />
       </Modal>
