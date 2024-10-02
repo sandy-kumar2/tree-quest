@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    username: "",
-    email: ""
+    name: "",
+    email: "",
   });
 
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const handleInputChange = ({ target: { name, value } }) => {
     setFormData((prevData) => ({
@@ -27,6 +29,7 @@ const Register = () => {
       );
       setSuccess(true);
       setMessage(data.message);
+      navigate("/");
     } catch (error) {
       setSuccess(false);
       const errorMessage =
@@ -57,8 +60,8 @@ const Register = () => {
             <label className="block mb-2 text-sm font-medium">Username</label>
             <input
               type="text"
-              name="username"
-              value={formData.username}
+              name="name"
+              value={formData.name}
               onChange={handleInputChange}
               required
               className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
